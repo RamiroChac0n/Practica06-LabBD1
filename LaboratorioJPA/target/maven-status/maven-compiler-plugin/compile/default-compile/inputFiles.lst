@@ -1,2 +1,9 @@
-/home/cesar/Documents/src_practica_6_solo_insert-select-base/src_practica_6_solo_insert-select_JDK11-base/src_practica_6/LaboratorioJPA/src/main/java/views/Window.java
-/home/cesar/Documents/src_practica_6_solo_insert-select-base/src_practica_6_solo_insert-select_JDK11-base/src_practica_6/LaboratorioJPA/src/main/java/org/cunori/laboratoriojpa/LaboratorioJPA.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/models/Tipo.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/controllers/exceptions/NonexistentEntityException.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/controllers/exceptions/PreexistingEntityException.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/models/Lenguaje.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/controllers/exceptions/IllegalOrphanException.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/controllers/TipoJpaController.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/views/Window.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/controllers/LenguajeJpaController.java
+/home/ramiro/Universidad/Base de Datos 1/06_Practica/repo/LaboratorioJPA/src/main/java/org/cunori/laboratoriojpa/LaboratorioJPA.java

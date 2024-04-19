@@ -5,11 +5,14 @@
  */
 package views;
 
+import controllers.LenguajeJpaController;
+import controllers.TipoJpaController;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
+import models.Lenguaje;
 
 
 /**
@@ -18,7 +21,9 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Window extends javax.swing.JFrame {
     
-    
+    EntityManagerFactory emf;
+    LenguajeJpaController lenguajeEntityManager;
+    TipoJpaController tipoEntityManager;
     
 
     /**
@@ -27,13 +32,26 @@ public class Window extends javax.swing.JFrame {
     public Window() {
         initComponents();
         
+        try {
+            emf = Persistence.createEntityManagerFactory("org.cunori_LaboratorioJPA_jar_1.0-SNAPSHOTPU");
+            lenguajeEntityManager = new LenguajeJpaController(emf);
+            tipoEntityManager = new TipoJpaController(emf);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());            
+        }
         
         fillLenguajeTable(); //cargar la tabla con lenguajes
         fillTipoComboBox(); //cargar el comboBox con las opciones
     }
     
     void fillLenguajeTable(){        
-        
+        DefaultTableModel model = (DefaultTableModel) tblLenguajes.getModel();
+        model.setRowCount(0);
+        List<Lenguaje> lenguajes = lenguajeEntityManager.findLenguajeEntities();
+        for (Lenguaje l : lenguajes) {
+            Object newRow[] = {l.getNombre(), l.getIdTipo().getNombre()};
+            model.addRow(newRow);
+        }
     }
     
     void fillTipoComboBox(){
